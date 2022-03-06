@@ -14,7 +14,7 @@ $ sudo apt install python3-selenium
 $ docker run -d -p 4444:4444 --shm-size="2g" selenium/standalone-chrome:4.1.2-20220217
 ```
 
-# How to use the script
+## How to use the script
 
 Beofre executing the script, make sure the selenium docker(chrome) is running.
 
