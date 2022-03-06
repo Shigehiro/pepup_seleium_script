@@ -16,7 +16,7 @@ $ docker run -d -p 4444:4444 --shm-size="2g" selenium/standalone-chrome:4.1.2-20
 
 ## How to use the script
 
-Beofre executing the script, make sure the selenium docker(chrome) is running.
+Before executing the script, make sure the selenium docker(chrome) is running.
 
 ```
 $ python3 pepup_auto_input.py --user user_name --password credentials
