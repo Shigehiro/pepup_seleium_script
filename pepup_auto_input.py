@@ -36,53 +36,53 @@ driver.get('https://pepup.life/scsk_mileage_campaigns/%s' % date)
 time.sleep(3)
 
 # walking
-random_step = random.randrange(10000,15000,500)
-step_count = driver.find_element_by_css_selector("div:nth-child(1) > .sc-ycydyz-5")
+random_step = random.randrange(10000,15000,100)
+step_count = driver.find_element_by_css_selector("div:nth-child(1) > .sc-1mklvxx-5")
 step_count.send_keys(random_step)
 time.sleep(3)
 
 # sleep time
-sleep_time = driver.find_element_by_css_selector("div:nth-child(2) > .sc-ycydyz-5")
+sleep_time = driver.find_element_by_css_selector("div:nth-child(2) > .sc-1mklvxx-5")
 sleep_time.send_keys("8")
 time.sleep(3)
 
 # sleep condition
-param3 = driver.find_element_by_css_selector("div:nth-child(3) > .sc-ycydyz-6 .sc-ycydyz-8")
+param3 = driver.find_element_by_css_selector("div:nth-child(3) > .sc-1mklvxx-6 .sc-1mklvxx-8")
 param3.click()
 time.sleep(3)
 
 # alcohol
-param4 = driver.find_element_by_css_selector("div:nth-child(4) > .sc-ycydyz-6 .sc-ycydyz-8")
+param4 = driver.find_element_by_css_selector("div:nth-child(4) > .sc-1mklvxx-6 > .sc-1mklvxx-7")
 param4.click()
 time.sleep(3)
 
 # do not drink after dinner
-param5 = driver.find_element_by_css_selector("div:nth-child(5) > .sc-ycydyz-6:nth-child(2) .sc-ycydyz-8")
+param5 = driver.find_element_by_css_selector("div:nth-child(5) > .sc-1mklvxx-6:nth-child(2) .sc-1mklvxx-8")
 param5.click()
 time.sleep(3)
 
 # calory
-param6 = driver.find_element_by_css_selector(".sc-ycydyz-6:nth-child(3) .sc-ycydyz-8")
+param6 = driver.find_element_by_css_selector(".sc-1mklvxx-6:nth-child(3) .sc-1mklvxx-8")
 param6.click()
 time.sleep(3)
 
 # syusyoku, syusai, fukusai
-param7 = driver.find_element_by_css_selector(".sc-ycydyz-6:nth-child(4) .sc-ycydyz-8")
+param7 = driver.find_element_by_css_selector(".sc-1mklvxx-6:nth-child(4) .sc-1mklvxx-8")
 param7.click()
 time.sleep(3)
 
 # do not eat snack between meal
-param8 = driver.find_element_by_css_selector(".sc-ycydyz-6:nth-child(5) .sc-ycydyz-8")
+param8 = driver.find_element_by_css_selector(".sc-1mklvxx-6:nth-child(5) .sc-1mklvxx-8")
 param8.click()
 time.sleep(3)
 
 # eat breakfast
-param9 = driver.find_element_by_css_selector(".sc-ycydyz-6:nth-child(6) .sc-ycydyz-8")
+param9 = driver.find_element_by_css_selector(".sc-1mklvxx-6:nth-child(6) .sc-1mklvxx-8")
 param9.click()
 time.sleep(3)
 
 # submit
-submit = driver.find_element_by_css_selector(".sc-afzobm-7")
+submit = driver.find_element_by_css_selector(".sc-g7yrzm-7")
 submit.click()
 time.sleep(5)
 

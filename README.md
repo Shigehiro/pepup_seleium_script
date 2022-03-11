@@ -2,7 +2,7 @@
 
 ## Preparation
 
-This script is tested on Ubuntu 20.04.
+This script is tested on Ubuntu 20.04, confirmed this script worked on 2022/03/11.
 install selenium via apt and run selenium docker. (As for selenium docker image, see https://github.com/SeleniumHQ/docker-selenium)
 
 ```
