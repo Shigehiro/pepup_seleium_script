@@ -3,7 +3,6 @@
 import time
 import json
 from selenium import webdriver
-from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 import datetime
 import random
 import argparse
@@ -28,41 +27,37 @@ options.add_extension(EXTENSION_PATH)
 #driver = webdriver.Chrome(options=options, desired_capabilities=DesiredCapabilities.CHROME)
 
 # pass captcha and then login
-for _ in range(5):
-    try:
-        driver = webdriver.Chrome(options=options, desired_capabilities=DesiredCapabilities.CHROME)
-        driver.get('https://pepup.life/home')
-        time.sleep(3)
+driver = webdriver.Chrome(options=options)
+driver.get('https://pepup.life/home')
+time.sleep(3)
 
-        driver.switch_to.frame(0)
-        time.sleep(3)
+driver.switch_to.frame(0)
+time.sleep(3)
 
-        driver.find_element(By.CSS_SELECTOR, ".recaptcha-checkbox-border").click()
-        time.sleep(3)
+driver.find_element(By.CSS_SELECTOR, ".recaptcha-checkbox-border").click()
+time.sleep(3)
 
-        driver.switch_to.default_content()
-        time.sleep(3)
+driver.switch_to.default_content()
+time.sleep(3)
 
-        driver.switch_to.frame(2)
-        time.sleep(3)
+driver.switch_to.frame(2)
+time.sleep(3)
 
-        driver.find_element(By.CSS_SELECTOR, ".help-button-holder").click()
-        time.sleep(10)
+driver.find_element(By.CSS_SELECTOR, ".help-button-holder").click()
+time.sleep(10)
 
-        driver.switch_to.default_content()
-        user = driver.find_element_by_id("sender-email")
-        user.send_keys(args.user)
-        time.sleep(3)
+driver.switch_to.default_content()
+user = driver.find_element_by_id("sender-email")
+user.send_keys(args.user)
+time.sleep(3)
 
-        password = driver.find_element_by_id("user-pass")
-        password.send_keys(args.password)
-        time.sleep(3)
+password = driver.find_element_by_id("user-pass")
+password.send_keys(args.password)
+time.sleep(3)
 
-        commit = driver.find_element_by_name("commit")
-        commit.click()
-        time.sleep(3)
-    except Exception as e:
-        driver.quit()
+commit = driver.find_element_by_name("commit")
+commit.click()
+time.sleep(3)
 
 # go to wakuwaku input page and submit today's data
 
