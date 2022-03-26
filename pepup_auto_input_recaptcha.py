@@ -41,8 +41,12 @@ time.sleep(random.randint(1,3))
 driver.switch_to.frame(2)
 time.sleep(random.randint(1,3))
 
-driver.find_element(By.CSS_SELECTOR, ".help-button-holder").click()
-time.sleep(random.randint(3,6))
+for _ in range(10):
+  try:
+    driver.find_element(By.CSS_SELECTOR, ".help-button-holder").click()
+    time.sleep(random.randint(1,3))
+  except Exception:
+          pass
 
 driver.switch_to.default_content()
 user = driver.find_element_by_id("sender-email")
@@ -141,7 +145,8 @@ else:
     time.sleep(0.05)
 
 # submit
-submit = driver.find_element_by_css_selector(".sc-g7yrzm-7")
+#submit = driver.find_element_by_css_selector(".sc-g7yrzm-7")
+submit = driver.find_element_by_xpath("//button[contains(.,\'一括入力\')]")
 submit.click()
 time.sleep(3)
 
