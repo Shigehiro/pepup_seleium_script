@@ -41,10 +41,10 @@ time.sleep(random.randint(1,3))
 driver.switch_to.frame(2)
 time.sleep(random.randint(1,3))
 
-for _ in range(10):
+for _ in range(20):
   try:
     driver.find_element(By.CSS_SELECTOR, ".help-button-holder").click()
-    time.sleep(random.randint(1,3))
+    time.sleep(random.randint(3,5))
   except Exception:
           pass
 
@@ -93,6 +93,8 @@ else:
 # alcohol
 #param4 = driver.find_element_by_css_selector("div:nth-child(4) > .sc-1mklvxx-6 > .sc-1mklvxx-7")
 param4 = driver.find_element_by_xpath("//label[contains(.,\'アルコール摂取20ｇ以内（休肝日含む）\')]")
+print(param4.is_selected())
+print(param4.is_displayed())
 if param4.is_selected():
     time.sleep(0.05)
 else:
@@ -148,6 +150,6 @@ else:
 #submit = driver.find_element_by_css_selector(".sc-g7yrzm-7")
 submit = driver.find_element_by_xpath("//button[contains(.,\'一括入力\')]")
 submit.click()
-time.sleep(3)
+time.sleep(1)
 
 driver.quit()
